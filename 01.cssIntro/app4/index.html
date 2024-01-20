@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transistion</title>
+
+    <style>
+        .container{
+            background-color: rgb(112, 148, 179);
+            width: 50vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: antiquewhite;
+            width: 7vw;
+            height: 4vh;
+
+            /* transition-property: transform; */
+            /* transition-property: transform, color;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.3s; */
+
+            /* OR SHORD HAND */
+            transition: all 3s ease-in-out 0.4s;
+
+            
+        }
+        .translate{
+            transform: translateX(40%) translateY(40%);
+            color: rgb(182, 9, 9);
+        }
+    </style>
+</head>
+<body>
+    <h1>Transistion</h1>
+    <div class="container">
+        <div class="box translate">BoX</div>
+    </div>
+</body>
+</html>
