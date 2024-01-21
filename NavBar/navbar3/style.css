@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: palegoldenrod;
+}
+
 header{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 55px;
     background-color: black;
+    width: 100%;
     padding: 0 100px;
 }
 
@@ -22,15 +26,15 @@ header{
 
 .hamburger{
     display: none;
-    cursor: pointer;
 }
 
 .hamburger .line{
     height: 3px;
-    background-color: whitesmoke;
     width: 20px;
-    margin: 5px;
+    background-color: whitesmoke;
+    margin: 5px 0;
     border-radius: 5px;
+    cursor: pointer;    
 }
 
 .navbar ul{
@@ -40,10 +44,11 @@ header{
 .navbar ul li{
     list-style: none;
 }
+
 .navbar ul li a{
-    color: whitesmoke;
-    text-decoration: none;
     padding: 10px 15px;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .navbar ul li a:hover{
@@ -57,12 +62,27 @@ header{
         padding: 0 40px;
     }
 }
-
-@media only screen and (max-width: 780px){
+@media only screen and (max-width: 750px){
     .hamburger{
         display: block;
     }
     .navbar{
-        display: none;
+        height: 0;
+        top: 55px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: black;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .navbar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        /* opacity: 0; */
     }
 }
