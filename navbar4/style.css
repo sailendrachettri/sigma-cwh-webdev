@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 55px;
+    background-color: lavender;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger .line{
+    height: 3px;
+    background-color: black;
+    width: 20px;
+    margin: 3px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a{
+    color: black;
+    text-decoration: none;
+    padding: 7px 0.5rem;
+    cursor: pointer;
+}
+
+.navbar ul li a.active{
+    margin: 0 7px;
+    color: lavender;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.navbar ul li a:hover{
+    color: lavender;
+    background-color: black;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width:980px){
+    header{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width:780px){
+    .hamburger{
+        display: block;
+    }
+    .navbar{
+        top: 45px;
+        height: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background-color: lavender;
+        transition: 0.2s;
+        width: 100vw;
+    }
+
+    .navbar.active{
+        height: 340px;
+    }
+
+    .navbar ul{
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 80px auto 0 auto;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .navbar ul{
+        opacity: 1;
+    }
+    .navbar ul li{
+        margin-bottom: 1rem;
+    }
+
+}
