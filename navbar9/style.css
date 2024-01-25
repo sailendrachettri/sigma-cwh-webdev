@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    height: 80px;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    color: whitesmoke;
+}
+
+.logo{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger .line{
+    height: 3px;
+    width: 20px;
+    border-radius: 5px;
+    margin: 5px 0;
+    background-color: whitesmoke;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 5px 7px;
+}
+
+nav ul li a:hover{
+    color: black;
+    border-radius: 50px;
+    background-color: whitesmoke;
+}
+
+nav ul li a.active{
+    color: black;
+    border-radius: 50px;
+    margin: 0 5px;
+    background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 650px){
+    header{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    .hamburger{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        height: 0;
+        background-color: black;
+        transition: 0.4s;
+    }
+
+    .openmenu .line-1{
+        transform: rotate(-45deg);
+    }
+    .openmenu .line-3{
+        transform: translatey(-500%) rotate(45deg);
+    }
+    .openmenu .line-2{
+        width: 0;
+    }
+
+    .navbar.active{
+        height: 300px;
+    }
+
+    nav ul{
+        display: block;
+        width: fit-content;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .navbar.active ul{
+        opacity: 1;
+    }
+    nav ul li{
+        margin: 1rem 0;
+    }
+}
+
