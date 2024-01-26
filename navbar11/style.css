@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    height: 80px;
+    background-color: azure;
+    justify-content: space-between;
+    padding: 0 80px;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger .line{
+    width: 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    height: 3px;
+    background-color: black;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 8px;
+}
+
+nav ul li a:hover{
+    color: whitesmoke;
+    border-radius: 50px;
+    background-color: black;
+}
+
+nav ul li a.active{
+    color: whitesmoke;
+    border-radius: 50px;
+    background-color: black;
+    margin: 0 6px;
+}
+
+@media only screen and (max-width: 680px){
+    header{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .hamburger{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        height: 0;
+        background-color: azure;
+        transition: 0.5s;
+    }
+    nav.openmenu{
+        height: 200px;
+    }
+    nav ul{
+        display: block;
+        margin: 0 auto;
+        opacity: 0;
+        width: fit-content;
+        text-align: center;
+        transition: 0.4s;
+    }
+    nav.openmenu ul{
+        opacity: 1;
+    }
+    nav ul li{
+        margin: 1rem 0;
+    }
+}
