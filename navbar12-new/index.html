@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Navbar 12 new</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">SAILENDRA</a>
+            <ul class="menu">
+                <li class="item">
+                    <a href="#" class="link">Home</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">Products</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">Pricing</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        let hamburger = document.querySelector('.hamburger');
+        let menu = document.querySelector('.menu');
+
+        hamburger.addEventListener("click", () =>{
+            hamburger.classList.toggle("active");
+            menu.classList.toggle("active");
+        })
+
+        document.querySelectorAll('.link').forEach(n => n.addEventListener('click', ()=>{
+            hamburger.classList.remove('active');
+            menu.classList.remove('active');
+        }))
+    </script>
+</body>
+</html>

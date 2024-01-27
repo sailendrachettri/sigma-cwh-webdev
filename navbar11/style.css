@@ -4,13 +4,60 @@
     box-sizing: border-box;
 }
 
+body{
+    display: grid;
+    grid-template-areas: "header header header"
+                         "main main aside"
+                         "footer footer footer";
+}
+
+
 header{
     display: flex;
+    grid-area: header;
     height: 80px;
     background-color: azure;
     justify-content: space-between;
     padding: 0 80px;
     align-items: center;
+    background-color: rebeccapurple;
+}
+
+main{
+    grid-area: main;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid pink;
+}
+
+aside .icons, main .icons{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .icon, aside .icon{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+aside{
+    grid-area: aside;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(160, 34, 55);
 }
 
 .logo{
@@ -58,6 +105,13 @@ nav ul li a.active{
     margin: 0 6px;
 }
 
+footer{
+    grid-area: footer;
+    height: 140px;
+    width: 100%;
+    background-color: green;
+}
+
 @media only screen and (max-width: 680px){
     header{
         padding: 0 30px;
@@ -65,6 +119,12 @@ nav ul li a.active{
 }
 
 @media only screen and (max-width: 540px){
+    body{
+        grid-template-areas: "header header header"
+                             "main main main"
+                             "aside aside aside"
+                             "footer footer footer";
+    }
     .hamburger{
         display: block;
     }
