@@ -23,9 +23,44 @@
             </ul>
         </div>
     </header>
-    <main></main>
-    <aside></aside>
-    <footer></footer>
+    <main id="main">
+        <h1>Register now for free</h1>
+        <form>
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name">
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" name="confirm-password" id="confirm-password">
+
+            <select name="country" id="country">
+                <option value="india">India</option>
+                <option value="japan">Japan</option>
+                <option value="south-korea">South Korea</option>
+                <option value="nepal">Nepal</option>
+                <option value="bhutan">Bhutan</option>
+                <option value="america">America</option>
+                <option value="russia">Russia</option>
+            </select>
+        </form>
+        <button type="submit" id="register-btn" onclick="register()">Submit</button>
+
+    </main>
+    <aside>
+        <div>Page views: 100K</div>
+    </aside>
+    <footer>
+        <h1>SOFTONIC</h1>
+        <div>Copyright &copy; 2024. All rights reserved</div>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

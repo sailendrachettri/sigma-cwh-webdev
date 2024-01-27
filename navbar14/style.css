@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root{
+    --border-color: rgb(216, 208, 208);
 }
 
 body{
@@ -69,21 +74,80 @@ header{
 }
 
 main{
-    background-color: gray;
     grid-area: main;
     min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    padding: 1rem 0;
+}
+
+main h1{
+    margin: 3rem 0;
+    font-size: 1.8rem;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 4px 2px whitesmoke;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+main form input{
+    margin-bottom: 0.7rem;
+    border: 1px solid whitesmoke;
+    outline: none;
+    padding: 3px;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    border-color: var(--border-color);
+}
+
+main form select{
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    border-color: var(--border-color);
+    outline: none;
+}
+
+main button{
+    font-size: 1.2rem;
+    padding: 12px 23px;
+    border-radius: 5px;
+    border-color: whitesmoke;
+    cursor: pointer;
+    color: seagreen;
 }
 
 aside{
-    background-color: royalblue;
+    margin: 0 5px;
+    padding: 1rem 0;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
     grid-area: aside;
-    min-height: 80vh;
+    display: flex;
+    justify-content: center; 
+    padding-top: 3rem;
 }
 
 footer{
-    background-color: orangered;
     grid-area: footer;
-    min-height: 40vh;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1{
+    margin-bottom: 0.5rem;
 }
 
 @media (max-width:660px){
@@ -93,6 +157,17 @@ footer{
 }
 
 @media (max-width: 520px) {
+    body{
+        grid-template-areas: "header header header"
+                         "main main main"
+                         "aside aside aside"
+                         "footer footer footer";
+    }
+
+    aside{
+        padding-top: 1rem;
+    }
+
     .hamburger{
         display: block;
     }
